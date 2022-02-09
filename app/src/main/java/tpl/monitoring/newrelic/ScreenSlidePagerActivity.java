@@ -12,6 +12,8 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.newrelic.agent.android.NewRelic;
 
+import java.util.Map;
+
 import tpl.monitoring.newrelic.ui.main.ScreenSlidePageFragment;
 
 public class ScreenSlidePagerActivity extends FragmentActivity {
@@ -31,6 +33,13 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         NewRelic.withApplicationToken(
                 "eu01xx09c8d719d87565a3f0e99f6d9009db6a5add-NRMA"
         ).start(this.getApplicationContext());
+        mPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                NewRelic.recordCustomEvent("pageEvent", Map.of("page", position));
+            }
+        });
     }
 
     /**
