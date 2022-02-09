@@ -10,6 +10,8 @@ import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.newrelic.agent.android.NewRelic;
+
 import tpl.monitoring.newrelic.ui.main.ScreenSlidePageFragment;
 
 public class ScreenSlidePagerActivity extends FragmentActivity {
@@ -26,6 +28,9 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         FragmentStateAdapter pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager(),
                 super.getLifecycle());
         mPager.setAdapter(pagerAdapter);
+        NewRelic.withApplicationToken(
+                "eu01xx09c8d719d87565a3f0e99f6d9009db6a5add-NRMA"
+        ).start(this.getApplicationContext());
     }
 
     /**
