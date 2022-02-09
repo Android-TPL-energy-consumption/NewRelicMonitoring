@@ -1,4 +1,4 @@
-package tpl.monitoring.template;
+package tpl.monitoring.newrelic;
 
 import android.os.Bundle;
 
@@ -10,7 +10,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import tpl.monitoring.template.ui.main.ScreenSlidePageFragment;
+import tpl.monitoring.newrelic.ui.main.ScreenSlidePageFragment;
 
 public class ScreenSlidePagerActivity extends FragmentActivity {
     /**

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PACKAGE="tpl.monitoring.template"
-ACTIVITY="tpl.monitoring.template.ScreenSlidePagerActivity"
+PACKAGE="tpl.monitoring.newrelic"
+ACTIVITY="tpl.monitoring.newrelic.ScreenSlidePagerActivity"
 
 # Launch app
 adb shell am start -n $PACKAGE/$ACTIVITY

@@ -1,7 +1,7 @@
-# MonitoringTemplate
+# NewRelicMonitoring
 
-This is a minimal application, only featuring a swipe container with 5 fragments. It is meant to be
-cloned to study energy consumption of monitoring third-party libraries.
+This is a minimal application, only featuring a swipe container with 5 fragments; it is used to 
+study New Relic analytics SDK energy consumption.
 
 ## Scenario
 
